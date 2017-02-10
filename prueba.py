@@ -16,7 +16,7 @@ class administrador():
         for e in self.c:
             print(e)
 
-admin = administrador()
-admin.mostrar_usuarios()
-admin.insert_usuario(['michel3', 'ap', 'ap_2', 'a@yahoo.com', '1', 0])
-admin.mostrar_usuarios()
+# admin = administrador()
+# admin.mostrar_usuarios()
+# admin.insert_usuario(['michel3', 'ap', 'ap_2', 'a@yahoo.com', '1', 0])
+# admin.mostrar_usuarios()
