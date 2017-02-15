@@ -13,8 +13,17 @@ class administrador():
 
     def mostrar_usuarios(self):
         self.c.execute("SELECT * FROM usuario")
+        lista = []
         for e in self.c:
-            print(e)
+            usuario = {'id': e[0],
+                        'nombre': e[1],
+                        'apellido1': e[2],
+                        'apellido2': e[3],
+                        'correo': e[4],
+                        'password': e[5],
+                        'tipo': e[6]}
+            lista.append( usuario )
+        return lista
 
 # admin = administrador()
 # admin.mostrar_usuarios()
