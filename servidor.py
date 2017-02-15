@@ -1,10 +1,11 @@
-from flask import Flask
+from flask import Flask, jsonify
 from prueba import administrador
 app = Flask('inicio')
 admin = administrador()
 @app.route('/')
 def root():
-    print(admin.mostrar_usuarios())
-    return "Hola"
+    data = admin.mostrar_usuarios()
+    resp = jsonify(data)
+    return resp
 
 app.run()
